@@ -18,5 +18,16 @@
         "intervention/image": "^2.7",
         "orbitale/imagemagick-php": "^3.3",
         "pbmedia/laravel-ffmpeg": "^8.3"
+      },
+      "extra": {
+    "laravel": {
+      "providers": [
+        "\\Usmanshoukat001\\MultipleImageConverter\\Providers\\ConverterProvider"
+      ],
+      "aliases": {
+        "MultipleImageConverter": "Usmanshoukat001\\MultipleImageConverter\\Converter"
       }
+    }
+  }
+    
 }
