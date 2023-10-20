@@ -13,7 +13,6 @@
             "email": "121452897+Usmanshoukat001@users.noreply.github.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.7",
