@@ -34,12 +34,12 @@ class PublishAsset extends Command
     public function handle()
     {
         $controllerDir = app()->basePath('app/Http/Controllers');
-        $ControllerTemplate = file_get_contents('multiple_image_converter/src/commands/stubs/ImageController.stub');
+        $ControllerTemplate = file_get_contents(__DIR__.'/stubs/ImageController.stub');
         $this->createFile($controllerDir . DIRECTORY_SEPARATOR, 'ImageController.php', $ControllerTemplate);
         $this->info('ImageController.php file is published.');
 
         $viewDir = app()->basePath('resources/views');
-        $HtmlTemplate = file_get_contents('multiple_image_converter/src/commands/stubs/imageconverter.blade.stub');
+        $HtmlTemplate = file_get_contents(__DIR__.'/stubs/imageconverter.blade.stub');
         $this->createFile($viewDir . DIRECTORY_SEPARATOR, 'imageconverter.blade.php', $HtmlTemplate);
         $this->info('imageconverter.blade.php file is published.');
 
