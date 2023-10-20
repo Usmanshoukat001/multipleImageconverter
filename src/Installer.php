@@ -42,19 +42,31 @@ class Installer
     {
         // Remove the controller file
         $fileSystem = new Filesystem();
-        $controllerPath = app_path('Http/Controllers/ImageController.php');
+        $controllerPath =  app()->basePath('app/Http/Controllers/ImageController.php');
         if ($fileSystem->exists($controllerPath)) {
-            $fileSystem->delete($controllerPath);
+        if ($fileSystem->delete($controllerPath)) {
+            echo "Controller file removed successfully.";
+        } else {
+            echo "Failed to remove the controller file.";
         }
+    } else {
+        echo "Controller file does not exist.";
+    }
     }
 
     protected static function removeViewFile()
     {
         // Remove the view file
         $fileSystem = new Filesystem();
-        $viewPath = resource_path('views/yourpackage/imageconverter.blade.php');
-        if ($fileSystem->exists($viewPath)) {
-            $fileSystem->delete($viewPath);
+        $viewPath =  app()->basePath('resources/views/imageconverter.blade.php');
+       if ($fileSystem->exists($viewPath)) {
+        if ($fileSystem->delete($viewPath)) {
+            echo "views file removed successfully.";
+        } else {
+            echo "Failed to remove the views file.";
         }
+    } else {
+        echo "views file does not exist.";
+    }
     }
 }
