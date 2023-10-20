@@ -1,0 +1,23 @@
+{
+    "name": "usmanshoukat001/multiple_image_converter",
+    "description": "this package for all image convert into different file",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Usmanshoukat001\\MultipleImageConverter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "usman shoukat",
+            "email": "121452897+Usmanshoukat001@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "intervention/image": "^2.7",
+        "orbitale/imagemagick-php": "^3.3",
+        "pbmedia/laravel-ffmpeg": "^8.3"
+      }
+}

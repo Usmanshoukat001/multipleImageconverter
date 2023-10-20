@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Larapackage\Imageconverter\Converter;
+
+class ImageController extends Controller
+{
+    public function imageconverter(Request $request)
+    {
+        $validated = $request->validate([
+            'file' => 'required|mimes:jpeg,png,jpg,gif',
+            'option' => 'required',
+        ]);
+
+        $callpack  = new Converter();
+
+        $data = $callpack->image_convert($request);
+    
+        return view('imageconverter')->with('data', $data);
+    }
+}
