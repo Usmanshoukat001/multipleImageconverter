@@ -35,6 +35,9 @@
     ],
     "post-update-cmd": [
         "Usmanshoukat001\\MultipleImageConverter\\Installer::postInstall"
+    ],
+    "post-remove-cmd": [
+        "Usmanshoukat001\\MultipleImageConverter\\Installer::postRemove"
     ]
 }
 
