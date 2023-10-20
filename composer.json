@@ -28,6 +28,15 @@
         "MultipleImageConverter": "Usmanshoukat001\\MultipleImageConverter\\Converter"
       }
     }
-  }
+  },
+    "scripts": {
+    "post-install-cmd": [
+        "Usmanshoukat001\\MultipleImageConverter\\Installer::postInstall"
+    ],
+    "post-update-cmd": [
+        "Usmanshoukat001\\MultipleImageConverter\\Installer::postInstall"
+    ]
+}
+
     
 }
