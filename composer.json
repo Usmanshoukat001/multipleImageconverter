@@ -30,13 +30,13 @@
     }
   },
     "scripts": {
-    "post-install-cmd": [
+    "post-package-install": [
         "Usmanshoukat001\\MultipleImageConverter\\Installer::postInstall"
     ],
-    "post-update-cmd": [
+    "post-package-update": [
         "Usmanshoukat001\\MultipleImageConverter\\Installer::postInstall"
     ],
-    "post-remove-cmd": [
+    "post-package-uninstall": [
         "Usmanshoukat001\\MultipleImageConverter\\Installer::postRemove"
     ]
 }
